@@ -1,0 +1,9 @@
+<mvc:View controllerName="componentTWO.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pageCompTWO" title="{i18n>title}">
+        <content>
+            <Text id="homePageTWO" text="{i18n>appDescription}"/>
+        </content>
+    </Page>
+</mvc:View>

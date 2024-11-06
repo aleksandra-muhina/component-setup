@@ -1,0 +1,29 @@
+<mvc:View controllerName="nestedcomponentstest.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
+    <tnt:ToolPage id="toolPage">
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNav">
+                <tnt:NavigationList id="navList"
+                itemSelect="onItemSelect">
+                    <tnt:NavigationListItem id="navHome"
+                    text="Home"
+                    key="home"/>
+                    <tnt:NavigationListItem id="navCompOne" 
+                    text="Component One"
+                    key="component1"/>
+                    <tnt:NavigationListItem id="navCompTwo"
+                    text="Component Two"
+                    key="componentTWO"/>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <App id="app"/>
+        </tnt:mainContents>
+        
+    </tnt:ToolPage>
+    
+</mvc:View>

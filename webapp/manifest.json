@@ -1,0 +1,140 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "nestedcomponentstest",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.3",
+      "toolsId": "99bdb06d-34e4-438e-8b75-95c162e05f9d"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.130.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "componentUsages": {
+      "component1": {
+        "name": "component1",
+        "settings": {},
+        "componentData": {},
+        "lazy": true
+      },
+      "componentTWO": {
+        "name": "componentTWO",
+        "settings": {},
+        "componentData": {},
+        "lazy": true
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "nestedcomponentstest.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "nestedcomponentstest.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "home",
+          "pattern": "",
+          "target": [
+            "TargetMainView"
+          ]
+        },
+        {
+          "name": "component1",
+          "pattern": "comp1",
+          "target": {
+            "name": "component1",
+            "prefix": "c1"
+          }
+        },
+        {
+          "name": "componentTWO",
+          "pattern": "comp2",
+          "target": {
+            "name": "componentTWO",
+            "prefix": "c2"
+          }
+        }
+        
+      ],
+      "targets": {
+        "TargetMainView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MainView",
+          "viewName": "MainView"
+        },
+        "component1": {
+          "id": "component1",
+          "type": "Component",
+          "usage": "component1"
+        },
+        "componentTWO": {
+          "id": "componentTWO",
+          "type": "Component",
+          "usage": "componentTWO"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "nestedcomponentstest.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

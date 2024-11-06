@@ -1,0 +1,12 @@
+<mvc:View controllerName="nestedcomponentstest.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pageMain" title="{i18n>title}">
+        <content >
+            <!--<Button id="btnComp1" text="{i18n>btnComp1}" press="routing"/>
+            <Button id="btnComp2" text="{i18n>btnComp2}" press="routingTwo"/>-->
+            <Text id="text" text="This is Home."></Text>
+        </content>
+
+    </Page>
+</mvc:View>
